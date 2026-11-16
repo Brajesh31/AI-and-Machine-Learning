@@ -121,7 +121,7 @@ The notebook uses a target field called `Report_curable` in its evaluation examp
 
 **File:** [Mini project (Naive Bayes Healthcare dataset).ipynb](Mini%20project%20%28Naive%20Bayes%20Healthcare%20dataset%29.ipynb)
 
-This notebook loads `diabetes.csv` and demonstrates a diabetes classification workflow. It replaces selected zero values that are treated as invalid measurements with missing values, applies median imputation, explores transformations and feature engineering, and compares Gaussian Naive Bayes with Bernoulli Naive Bayes.
+This notebook loads `diabetes.csv` and compares Gaussian Naive Bayes with Bernoulli Naive Bayes. It engineers glucose, BMI, and age categories, applies dummy encoding, filters insulin values using an IQR rule, and transforms insulin and skin-thickness features. The current code does not implement the zero-to-missing replacement, median imputation, or scaling previously described in this README.
 
 **Topics covered**
 - Invalid-zero handling for selected clinical measurements.
