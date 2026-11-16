@@ -50,6 +50,6 @@ Check the target definition and time ordering before interpreting a random split
 - Notebook cells may retain stale output from previous executions.
 - Execution counters and saved output are not proof of a fresh run.
 - The notebooks do not share a common pipeline or package.
-- No automated notebook execution workflow is currently present.
+- CI validates notebook JSON structure and Python syntax in code cells. It does not execute model-training cells.
 
 When a notebook changes materially, update this catalogue with verified details and record the environment and data provenance.
