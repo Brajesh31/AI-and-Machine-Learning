@@ -28,7 +28,7 @@ The current code trains K-Nearest Neighbors, Decision Tree, Logistic Regression,
 
 **Observed input:** `diabetes.csv`.
 
-The notebook imports GaussianNB and BernoulliNB. It contains handling for selected zero-valued measurements, median imputation, logarithmic and square-root feature transformations, age and BMI categories, dummy encoding, and scaling.
+The notebook imports GaussianNB and BernoulliNB. It creates glucose, BMI, and age categories, applies dummy encoding, filters insulin observations using an IQR rule, applies a logarithmic transform to insulin, and a square-root transform to skin thickness. It does not currently implement zero-value imputation or feature scaling.
 
 The code compares train and test accuracy. A more complete evaluation should also include class-wise precision, recall, F1-score, a confusion matrix, and validation of class proportions.
 
