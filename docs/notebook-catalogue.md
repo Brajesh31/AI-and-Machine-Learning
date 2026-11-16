@@ -38,7 +38,7 @@ The code compares train and test accuracy. A more complete evaluation should als
 
 **Observed input:** `Cryptocurrency_FeaturedData.csv`.
 
-The notebook imports RandomForestClassifier and GridSearchCV. Its parameter grid explores estimator count, tree depth, minimum samples for splitting and leaves, and the number of features considered. The search uses five-fold cross-validation and accuracy scoring.
+The notebook imports RandomForestClassifier and GridSearchCV. Its parameter grid explores estimator count, tree depth, minimum samples for splitting and leaves, and the number of features considered. The search uses five-fold cross-validation and accuracy scoring. The final evaluation now uses `gscv_rf.best_estimator_` rather than fitting a separate model with unrelated hard-coded parameters.
 
 Check the target definition and time ordering before interpreting a random split on cryptocurrency data. If observations are time-dependent, random splitting may lead to an optimistic estimate.
 
