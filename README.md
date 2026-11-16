@@ -1,343 +1,405 @@
- 1) 📊 **Mini Project - Data Preprocessing & Regression Model**
+# 🤖 AI and Machine Learning
+
+<p align="center">
+  <strong>A collection of hands-on Jupyter notebooks exploring data preprocessing, regression, healthcare classification, and ensemble learning.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Brajesh31/AI-and-Machine-Learning">Repository</a> ·
+  <a href="docs/README.md">Documentation</a> ·
+  <a href="CONTRIBUTING.md">Contributing</a> ·
+  <a href="ROADMAP.md">Roadmap</a>
+</p>
+
+> [!IMPORTANT]
+> The healthcare notebooks are educational experiments. They are not clinically validated, must not be used for diagnosis, treatment, screening, insurance, or other high-impact decisions, and should not be interpreted as medical advice. The repository does not include the referenced CSV datasets.
 
 ---
 
-### 📌 Introduction
+## 📚 Table of Contents
 
-This project focuses on end-to-end data preprocessing and regression model building. The main objective is to clean, transform, and prepare raw data for machine learning tasks, followed by implementing an **Ordinary Least Squares (OLS) Regression** model. It demonstrates important concepts of data cleaning, handling missing values, encoding categorical data, feature engineering, and model evaluation.
-
----
-
-### 🚀 Features
-
-* Handling missing values (numerical & categorical)
-* Outlier detection and treatment using **IQR method**
-* Encoding categorical features (**One-Hot Encoding**)
-* Data transformation and standardization
-* Feature engineering for better model performance
-* Splitting dataset into training and testing
-* Building and evaluating **OLS Regression models**
-
----
-
-### 🛠️ Technology Used
-
-* **Python**
-* **Jupyter Notebook**
-* **Libraries:**
-
-  * Pandas
-  * NumPy
-  * Matplotlib / Seaborn (for visualization)
-  * Scikit-learn
-  * Statsmodels (for OLS Regression)
+1. [🌟 Project Overview](#-project-overview)
+2. [🎯 Learning Objectives](#-learning-objectives)
+3. [🗂️ Notebook Catalogue](#️-notebook-catalogue)
+4. [🧪 Workflow and Methodology](#-workflow-and-methodology)
+5. [🧰 Technology Stack](#-technology-stack)
+6. [🗂️ Repository Structure](#️-repository-structure)
+7. [📊 Dataset Requirements](#-dataset-requirements)
+8. [🖥️ Environment Requirements](#️-environment-requirements)
+9. [🚀 Installation](#-installation)
+10. [▶️ Run the Notebooks](#️-run-the-notebooks)
+11. [📏 Model Evaluation](#-model-evaluation)
+12. [⚠️ Reproducibility and Data Leakage](#️-reproducibility-and-data-leakage)
+13. [🩺 Healthcare and Responsible AI Notice](#-healthcare-and-responsible-ai-notice)
+14. [🔐 Data Privacy and Security](#-data-privacy-and-security)
+15. [🧯 Troubleshooting](#-troubleshooting)
+16. [🤝 Contributing](#-contributing)
+17. [🗺️ Roadmap](#️-roadmap)
+18. [📖 Documentation](#-documentation)
+19. [📄 License](#-license)
 
 ---
 
-### 📂 How to Use
+## 🌟 Project Overview
 
-1. Clone or download the project notebook.
-2. Install the required libraries:
+This repository contains four independent Jupyter notebooks developed as practical exercises in data analysis and machine learning. The examples cover the progression from raw tabular data to preprocessing, model fitting, prediction, and performance evaluation.
 
-   ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
-   ```
-3. Open the notebook in Jupyter:
+The notebooks are educational artifacts, not a single packaged application. Each notebook has its own dataset assumptions, preprocessing steps, model choices, and execution flow. There is no shared Python package, API service, database, hosted model, or command-line application in the current repository.
 
-   ```bash
-   jupyter notebook "Mini project 1.ipynb"
-   ```
-4. Run cells step by step to:
+### What is included
 
-   * Preprocess data
-   * Apply transformations
-   * Train and evaluate the regression model
+- A regression-oriented preprocessing workflow using OLS regression.
+- A liver-disease classification notebook comparing several supervised learning methods.
+- A diabetes classification example using Gaussian and Bernoulli Naive Bayes.
+- A cryptocurrency-feature classification example using Random Forest and GridSearchCV.
 
----
+### What is not included
 
-### 📖 Topics Covered
+- The source CSV datasets referenced by the notebooks.
+- A pinned Python dependency file such as `requirements.txt`.
+- A unified training pipeline or reusable model package.
+- A deployed inference API or web interface.
+- A model registry, experiment tracker, or saved production model.
+- Clinical validation or authorization for medical use.
 
-* **Data Cleaning & Preprocessing**
+## 🎯 Learning Objectives
 
-  * Handling duplicates
-  * Missing value treatment (numerical & categorical)
-  * Outlier detection (Boxplot, IQR method)
-* **Data Transformation**
+Working through these notebooks can help you learn how to:
 
-  * Standardization & Normalization
-  * Feature engineering
-* **Categorical Data Encoding**
-* **Dataset Splitting (Train/Test)**
-* **Model Building**
+1. Inspect tabular data with Pandas.
+2. Identify missing values, duplicate records, unusual values, and outliers.
+3. Prepare numerical and categorical features.
+4. Apply encoding and scaling transformations.
+5. Split data into training and testing subsets.
+6. Fit regression and classification estimators.
+7. Compare model behaviour using evaluation metrics.
+8. Tune selected hyperparameters with cross-validation.
+9. Interpret the limitations of small educational experiments.
+10. Build more reproducible and responsible machine-learning workflows.
 
-  * OLS Regression
-  * Model evaluation (R², comparison between transformations)
+## 🗂️ Notebook Catalogue
 
----
+The repository contains these four notebooks. Open each notebook in GitHub or launch it locally through Jupyter.
 
-### ✅ Conclusion
+### 1. Mini Project: Data Preprocessing and Regression Model
 
-This project helps in understanding the workflow of **data preprocessing to model building**. By exploring multiple transformations and comparing their effects on regression accuracy, it provides **hands-on experience in preparing datasets for predictive modeling**.
+<text></text>
 
+**File:** [Mini Project - Data Preprocessing & Regression Model.ipynb](Mini%20Project%20-%20Data%20Preprocessing%20%26%20Regression%20Model.ipynb)
 
+This notebook focuses on preparing tabular data for regression. Its stated workflow includes missing-value handling, duplicate checks, IQR-based outlier treatment, categorical encoding, transformation, feature engineering, train/test splitting, and Ordinary Least Squares regression using Statsmodels.
 
+**Topics covered**
+- Numerical and categorical missing-value treatment.
+- Duplicate inspection.
+- Boxplots and interquartile-range reasoning.
+- One-hot encoding.
+- Standardization and normalization.
+- Feature transformation and engineering.
+- OLS regression and residual-oriented evaluation.
+- R², mean absolute error, and mean squared error.
 
+**Dataset requirement:** The exact CSV filename and source should be confirmed from the notebook cells. This repository does not currently include a CSV dataset for this notebook.
 
+### 2. Liver Disease Prediction
 
+**File:** [Liver Disease Prediction (KNN, Decision Tree, Naive Bayes).ipynb](Liver%20Disease%20Prediction%20%28KNN%20%2C%20Desicion%20Tree%20%2C%20Naive%20Bayes%29.ipynb)
 
+This notebook loads `liver_cirrhosis.csv` and explores classification methods. The inspected cells include K-Nearest Neighbors, Decision Tree, Logistic Regression, SVM-related imports, and classification evaluation. The README's historical description also mentions Naive Bayes and Random Forest, so check the active notebook cells before assuming every listed estimator is trained.
 
- 2) # 📊 Liver Disease Prediction - README
+The notebook uses a target field called `Report_curable` in its evaluation examples. That label should be treated as a dataset-specific target, not as an authoritative medical determination.
 
-## 📌 Project Overview
+**Topics covered**
+- Tabular medical-data preparation.
+- Train/test splitting.
+- Standard scaling for distance-based models.
+- KNN and Decision Tree classification.
+- Model comparison and classification reports.
+- Accuracy, precision, recall, and F1-score.
 
-This project focuses on predicting whether a liver disease case is **curable** or **not curable** based on patient medical data. The model is trained using different classification algorithms and evaluated using standard performance metrics.
+**Dataset requirement:** `liver_cirrhosis.csv`, not committed in this repository.
 
-## 🚀 Features
+### 3. Mini Project: Naive Bayes on Healthcare Dataset
 
-* Data preprocessing (cleaning, transformations, handling missing values)
-* Implementation of multiple machine learning classification models:
+**File:** [Mini project (Naive Bayes Healthcare dataset).ipynb](Mini%20project%20%28Naive%20Bayes%20Healthcare%20dataset%29.ipynb)
 
-  * Logistic Regression
-  * Naive Bayes
-  * Support Vector Machine (SVM)
-  * K-Nearest Neighbors (KNN)
-  * Decision Tree
-  * Random Forest
-* Model evaluation using:
+This notebook loads `diabetes.csv` and demonstrates a diabetes classification workflow. It replaces selected zero values that are treated as invalid measurements with missing values, applies median imputation, explores transformations and feature engineering, and compares Gaussian Naive Bayes with Bernoulli Naive Bayes.
 
-  * Accuracy
-  * Precision
-  * Recall
-  * F1 Score
-* Performance comparison of algorithms
+**Topics covered**
+- Invalid-zero handling for selected clinical measurements.
+- Median imputation.
+- Log and square-root transformations.
+- Age and BMI-derived categories.
+- One-hot/dummy encoding.
+- Standard scaling.
+- GaussianNB and BernoulliNB.
+- Train and test accuracy comparison.
 
-## 🛠️ Tech Stack
+**Dataset requirement:** `diabetes.csv`, not committed in this repository.
 
-* **Language:** Python 🐍
-* **Libraries:**
+### 4. Mini Project: Random Forest Classification
 
-  * `pandas`, `numpy` → Data handling
-  * `scikit-learn` → Machine Learning models & metrics
-  * `matplotlib`, `seaborn` → Visualization
+**File:** [Mini project (Random Forest).ipynb](Mini%20project%20%28Random%20Forest%29.ipynb)
 
-## 📂 Project Files
+This notebook loads `Cryptocurrency_FeaturedData.csv` and trains a Random Forest classifier. It also sets up a parameter search using GridSearchCV with a five-fold cross-validation strategy and accuracy scoring. The notebook's imports and historical description mention KNN and Decision Tree for comparative work.
 
-* `Predicted modeling on liver data (3).ipynb` → Main Jupyter Notebook with preprocessing, model building, and evaluation
-* `README.md` → Project documentation (this file)
+**Topics covered**
+- Data inspection and preprocessing.
+- Random Forest classification.
+- GridSearchCV.
+- Number of estimators, tree depth, split size, leaf size, and feature selection.
+- Cross-validation.
+- Accuracy-based model selection.
 
-## 📊 Evaluation Metrics
+**Dataset requirement:** `Cryptocurrency_FeaturedData.csv`, not committed in this repository.
 
-The model is evaluated using the following:
+> [!NOTE]
+> Dataset names and model methods above are based on notebook code and repository documentation. They do not imply that the notebooks have been executed successfully in the current environment or that any reported model is validated.
 
-```python
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+## 🧪 Workflow and Methodology
 
-y_train_class = (y_train_pred > 0.5).astype(int)
+Most notebooks follow a similar conceptual lifecycle:
 
-print("Accuracy :", accuracy_score(train["Report_curable"], y_train_class))
-print("Precision:", precision_score(train["Report_curable"], y_train_class))
-print("Recall   :", recall_score(train["Report_curable"], y_train_class))
-print("F1 Score :", f1_score(train["Report_curable"], y_train_class))
+```text
+Raw tabular dataset
+        |
+        v
+Data inspection and understanding
+        |
+        v
+Missing value / duplicate checks
+        |
+        v
+Feature preparation and transformation
+        |
+        v
+Train / test split
+        |
+        v
+Model fitting and tuning
+        |
+        v
+Predictions on held-out data
+        |
+        v
+Metrics and interpretation
 ```
 
-## 📈 Possible Improvements
+The exact order differs by notebook. A robust future version should place splitting before any transformation whose parameters are learned from data, then fit those transformations using training data only.
 
-* Outlier treatment
-* Feature engineering
-* Hyperparameter tuning
-* Using ensemble methods (XGBoost, Gradient Boosting)
-* Cross-validation for robust evaluation
+## 🧰 Technology Stack
 
-## 🎯 Goal
+| Tool or library | Purpose |
+|---|---|
+| Python | Notebook programming language |
+| Jupyter Notebook | Interactive execution environment |
+| Pandas | Tabular data loading and manipulation |
+| NumPy | Numeric operations and arrays |
+| Matplotlib | Plotting and visualization |
+| Seaborn | Statistical visual exploration |
+| Scikit-learn | Preprocessing, estimators, splitting, tuning, and metrics |
+| Statsmodels | OLS regression modelling and statistical summaries |
 
-To build an accurate and reliable machine learning model that can help in early prediction and categorization of liver disease outcomes, assisting healthcare professionals in decision-making.
+The actual installed versions are not pinned in the current repository. Create a separate environment and record versions when reproducing results.
+
+## 🗂️ Repository Structure
+
+```text
+AI-and-Machine-Learning/
+├── Liver Disease Prediction (KNN , Desicion Tree , Naive Bayes).ipynb
+├── Mini Project - Data Preprocessing & Regression Model.ipynb
+├── Mini project (Naive Bayes Healthcare dataset).ipynb
+├── Mini project (Random Forest).ipynb
+├── docs/
+│   ├── README.md
+│   ├── notebook-catalogue.md
+│   ├── methodology.md
+│   ├── reproducibility.md
+│   ├── datasets.md
+│   ├── evaluation.md
+│   ├── responsible-ai.md
+│   ├── installation.md
+│   ├── development.md
+│   ├── troubleshooting.md
+│   ├── faq.md
+│   └── deployment.md
+├── .env.example
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── CITATION.cff
+├── CODEOWNERS
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── GOVERNANCE.md
+├── LICENSE
+├── MAINTAINERS.md
+├── README.md
+├── ROADMAP.md
+├── SECURITY.md
+└── SUPPORT.md
+```
+
+## 📊 Dataset Requirements
+
+The notebooks refer to local CSV files that are not present in the repository tree. Before running a notebook, obtain the relevant dataset from an authorized source and place it where the notebook's relative path expects it, or deliberately update the path in a separate code change.
+
+See [docs/datasets.md](docs/datasets.md) for the expected filenames, provenance requirements, and data-handling guidance.
+
+Do not assume a dataset is included just because a notebook contains `pd.read_csv(...)`.
+
+## 🖥️ Environment Requirements
+
+- Python 3.9 or newer is a practical starting point; actual compatibility depends on library versions.
+- Jupyter Notebook or JupyterLab.
+- pandas, NumPy, Matplotlib, Seaborn, scikit-learn, and Statsmodels for workflows that import them.
+- Enough memory for the selected dataset and model search.
+- Access to the source datasets under their applicable terms.
+
+## 🚀 Installation
+
+Create an isolated Python environment:
+
+**Windows PowerShell**
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn statsmodels
+```
+
+**macOS / Linux**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn statsmodels
+```
+
+These commands install a practical common dependency set. They do not reproduce a historical environment exactly because the repository does not currently pin package versions. See [docs/reproducibility.md](docs/reproducibility.md).
+
+## ▶️ Run the Notebooks
+
+From the repository root:
+
+```bash
+jupyter notebook
+```
+
+Then open the notebook you want to study. Alternatively:
+
+```bash
+jupyter notebook "Mini project (Naive Bayes Healthcare dataset).ipynb"
+```
+
+For reliable execution:
+1. Confirm the required CSV is available.
+2. Select the correct Python kernel.
+3. Restart the kernel.
+4. Run cells from top to bottom.
+5. Record any warnings or errors.
+6. Confirm that results are produced from the current data and code.
+
+## 📏 Model Evaluation
+
+Classification notebooks use metrics including accuracy, precision, recall, F1-score, and classification reports. The regression notebook imports R², mean squared error, and mean absolute error.
+
+Do not compare models using accuracy alone, particularly when the target classes are imbalanced or the cost of false positives and false negatives differs.
+
+For detailed definitions and interpretation, see [docs/evaluation.md](docs/evaluation.md).
+
+## ⚠️ Reproducibility and Data Leakage
+
+Machine-learning results are only meaningful when the data split and preprocessing procedure are sound.
+
+Important checks:
+- Split before fitting imputers, scalers, encoders, or feature transformations.
+- Fit transformations on training data only.
+- Apply the fitted transformation to the test data.
+- Use a fixed random seed where supported.
+- Use stratification for classification when appropriate.
+- Keep test data out of hyperparameter selection.
+- Record the dataset source, version, feature definitions, and target.
+- Report class counts and confusion matrices where relevant.
+
+The existing notebooks are educational and may not consistently follow all of these practices. Review their cells before interpreting the results as robust estimates.
+
+## 🩺 Healthcare and Responsible AI Notice
+
+The liver and diabetes notebooks use healthcare-related datasets and labels. They are not clinical decision-support systems.
+
+A model trained on a public or educational dataset can be affected by:
+- Sampling and selection bias.
+- Missing or inaccurate measurements.
+- Population differences.
+- Class imbalance.
+- Label-definition errors.
+- Data leakage.
+- Outdated or unrepresentative data.
+- Poor calibration and threshold choices.
+
+Do not use these notebooks to diagnose, treat, triage, screen, or make decisions about individuals. Do not share identifiable health information. Any real-world clinical use would require extensive independent validation, domain expertise, privacy safeguards, governance, and applicable regulatory review.
+
+## 🔐 Data Privacy and Security
+
+- Never commit personal health information or identifiable records.
+- Do not commit API keys, tokens, passwords, or private dataset credentials.
+- Review notebook outputs before pushing changes.
+- Remove machine-specific absolute paths.
+- Confirm dataset licences and redistribution terms.
+- Treat downloaded datasets and notebook code as untrusted until reviewed.
+- Keep private data out of logs, screenshots, and issue reports.
+
+## 🧯 Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| CSV file not found | Confirm the dataset filename and notebook working directory |
+| Import error | Activate the intended environment and install the missing package |
+| Kernel not listed | Register or select the virtual environment kernel |
+| Results differ | Restart kernel, check random seeds, data version, and package versions |
+| Unexpectedly high test scores | Investigate data leakage, duplicates, target leakage, and split strategy |
+| NaN or infinity errors | Inspect transformations and input ranges |
+| Grid search is slow | Review the parameter grid, dataset size, and parallel workers |
+| Notebook opens but fails | Run cells in order and inspect the first exception |
+
+## 🤝 Contributing
+
+Contributions that improve methodology, clarity, reproducibility, responsible data handling, and documentation are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing a notebook.
+
+## 🗺️ Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for proposed improvements, including environment pinning, dataset documentation, notebook validation, leakage prevention, and responsible model evaluation.
+
+## 📖 Documentation
+
+| Document | Description |
+|---|---|
+| [Documentation index](docs/README.md) | All technical guides |
+| [Notebook catalogue](docs/notebook-catalogue.md) | Notebook purpose and model inventory |
+| [Datasets](docs/datasets.md) | CSV requirements, provenance, and privacy |
+| [Methodology](docs/methodology.md) | Preprocessing and modelling lifecycle |
+| [Evaluation](docs/evaluation.md) | Classification and regression metrics |
+| [Reproducibility](docs/reproducibility.md) | Environments, versions, seeds, and validation |
+| [Responsible AI](docs/responsible-ai.md) | Healthcare, bias, and appropriate use |
+| [Installation](docs/installation.md) | Python setup |
+| [Development](docs/development.md) | Notebook editing and review |
+| [Troubleshooting](docs/troubleshooting.md) | Common notebook problems |
+| [FAQ](docs/faq.md) | Common questions |
+| [Deployment](docs/deployment.md) | Current deployment boundary |
+| [Contributing](CONTRIBUTING.md) | Contribution workflow |
+| [Security](SECURITY.md) | Security reporting |
+| [Code of Conduct](CODE_OF_CONDUCT.md) | Community expectations |
+| [Support](SUPPORT.md) | Help and reporting |
+| [Maintainers](MAINTAINERS.md) | Repository maintenance |
+| [Governance](GOVERNANCE.md) | Decision process |
+| [Changelog](CHANGELOG.md) | Verified changes |
+
+## 📄 License
+
+The repository is distributed under the MIT License. See [LICENSE](LICENSE) for the full text.
 
 ---
 
-✍️ **Author:** Brajesh kumar
-
-
-
-
-3) # Project: Random Forest Classification with Model Evaluation
-
-## Overview
-
-This project demonstrates the implementation of **Random Forest Classification** along with other machine learning models such as **K-Nearest Neighbors (KNN)** and **Decision Tree Classifier**. The dataset is preprocessed, trained, and evaluated using multiple metrics to assess model performance.
-
-## Key Features
-
-* Data Preprocessing (handling missing values, transformations, outlier treatment)
-* Model Training using:
-
-  * Random Forest Classifier
-  * Decision Tree Classifier
-  * K-Nearest Neighbors (KNN)
-* Hyperparameter Tuning using **GridSearchCV**
-* Model Evaluation using:
-
-  * Accuracy
-  * Precision
-  * Recall
-  * F1 Score
-
-## Technologies Used
-
-* Python 3
-* Scikit-learn
-* Pandas
-* NumPy
-* Jupyter Notebook
-
-## Steps Performed
-
-1. **Import Libraries**: Loaded required libraries for machine learning and evaluation.
-2. **Data Preprocessing**: Cleaned and transformed dataset to prepare for model training.
-3. **Model Building**:
-
-   * Random Forest Classifier was trained with GridSearchCV for hyperparameter optimization.
-   * Decision Tree and KNN were also implemented for comparison.
-4. **Evaluation**:
-
-   * Predictions compared with actual labels.
-   * Performance evaluated using accuracy, precision, recall, and F1 score.
-
-## Results
-
-* The models were evaluated and compared.
-* Random Forest generally provided higher performance compared to Decision Tree and KNN.
-
-## How to Run
-
-1. Install required libraries:
-
-   ```bash
-   pip install scikit-learn pandas numpy jupyter
-   ```
-2. Open the Jupyter Notebook:
-
-   ```bash
-   jupyter notebook "Mini project (Random Forest).ipynb"
-   ```
-3. Run cells step by step to see preprocessing, training, and evaluation results.
-
-## Future Improvements
-
-* Perform outlier treatment and feature transformation for better accuracy.
-* Try additional models like **SVM, Logistic Regression, Gradient Boosting**.
-* Implement feature importance visualization.
-
-## Author
-
-Brajesh 
-
-
-
-
-
-
-
-4) # 📊 Naive Bayes on Healthcare Dataset
-
-## 📌 Project Overview
-
-This project applies **Naive Bayes classifiers** (GaussianNB & BernoulliNB) on a healthcare dataset (Diabetes Prediction). The aim is to classify patients as **diabetic or non-diabetic** based on various health parameters such as glucose, blood pressure, insulin, BMI, etc.
-
----
-
-## ⚙️ Steps Performed
-
-### 1. Data Preprocessing
-
-* Loaded the diabetes dataset.
-* Replaced invalid values (like 0 in Glucose, BloodPressure, Insulin, SkinThickness, BMI) with **NaN**.
-* Imputed missing values using **median strategy**.
-* Applied transformations to handle skewness:
-
-  * `np.log1p()` for Insulin
-  * `np.sqrt()` for SkinThickness
-* Feature engineering:
-
-  * Created bins for **Age Groups** (20-30, 30-40, 40-50, 50-60, 60+)
-  * Created BMI categories (Underweight, Normal, Overweight, Obese)
-* Converted categorical bins into dummy variables.
-* Scaled numerical features using **StandardScaler**.
-
----
-
-### 2. Model Training
-
-Two models were trained and evaluated:
-
-* **Gaussian Naive Bayes** → Suitable for continuous features.
-* **Bernoulli Naive Bayes** → Suitable for binary features.
-
----
-
-### 3. Model Evaluation
-
-* Compared **Train Accuracy** and **Test Accuracy** of both models.
-* Used metrics: **Accuracy, Precision, Recall, F1-score**.
-* Observed class imbalance (500 non-diabetic, 268 diabetic cases) → considered in evaluation.
-
----
-
-## 📈 Results
-
-* **GaussianNB** generally performs better for this dataset since features are continuous.
-* **BernoulliNB** can still be tested after binarizing features.
-* Both models provide a good baseline for classification.
-
----
-
-## 🛠️ Tech Stack
-
-* **Python**
-* **Pandas, NumPy** (Data Handling)
-* **Matplotlib, Seaborn** (EDA & Visualization)
-* **Scikit-learn** (Modeling & Evaluation)
-
----
-
-## 🚀 How to Run
-
-1. Clone this repo:
-
-   ```bash
-   git clone <your-repo-link>
-   ```
-2. Navigate into the folder:
-
-   ```bash
-   cd naive-bayes-healthcare
-   ```
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the notebook:
-
-   ```bash
-   jupyter notebook "Mini project (Naive Bayes Healthcare dataset).ipynb"
-   ```
-
----
-
-## 📌 Future Improvements
-
-* Use **SMOTE** or class weights to handle imbalance.
-* Try **Multinomial Naive Bayes** on discretized features.
-* Compare with other models: Decision Tree, Random Forest, Logistic Regression.
-* Hyperparameter tuning for better performance.
-
----
-
-## 👨‍💻 Author
-
-* **Brajesh **
-
-
-
-
-Last updated: 2026-11-15 23:16 UTC
+**Maintained by Brajesh Kumar** · [GitHub](https://github.com/Brajesh31)
