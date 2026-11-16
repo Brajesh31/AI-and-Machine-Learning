@@ -403,3 +403,32 @@ The repository is distributed under the MIT License. See [LICENSE](LICENSE) for 
 **Maintained by Brajesh Kumar** · [GitHub](https://github.com/Brajesh31)
 
 Last updated: 2026-11-16 01:58 UTC
+
+
+## 🧪 Local Validation
+
+Install the notebook environment:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Install development and validation tools:
+
+```bash
+python -m pip install -r requirements-dev.txt
+```
+
+Validate notebook structure and Python cell syntax without executing the experiments:
+
+```bash
+python scripts/validate_notebooks.py
+```
+
+Run the repository checks:
+
+```bash
+python -m pytest
+```
+
+The CI workflow performs structural and static syntax checks. It does not run model training because the required CSV datasets are not distributed with this repository.
