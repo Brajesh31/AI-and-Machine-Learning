@@ -10,7 +10,7 @@ The README describes an end-to-end preprocessing and OLS regression exercise. Th
 
 **Libraries named in project documentation:** Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Statsmodels.
 
-**Data dependency:** the exact input CSV should be confirmed from the notebook's active code. The repository does not currently contain its dataset.
+**Data dependency:** `LoansData (1).csv`, not included in the repository.
 
 **Review before trusting metrics:** check that train/test separation occurs before learning preprocessing parameters, that transformations do not use target information, and that residual and error metrics are interpreted correctly.
 
