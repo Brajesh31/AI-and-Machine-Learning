@@ -139,7 +139,7 @@ This notebook loads `diabetes.csv` and compares Gaussian Naive Bayes with Bernou
 
 **File:** [Mini project (Random Forest).ipynb](Mini%20project%20%28Random%20Forest%29.ipynb)
 
-This notebook loads `Cryptocurrency_FeaturedData.csv` and trains a Random Forest classifier. It also sets up a parameter search using GridSearchCV with a five-fold cross-validation strategy and accuracy scoring. The notebook's imports and historical description mention KNN and Decision Tree for comparative work.
+This notebook loads `Cryptocurrency_FeaturedData.csv` and trains a Random Forest classifier. It also sets up a parameter search using GridSearchCV with a five-fold cross-validation strategy and accuracy scoring. The current notebook searches Random Forest hyperparameters with GridSearchCV, then evaluates the selected best estimator. It does not implement the KNN and Decision Tree comparisons mentioned in older descriptions.
 
 **Topics covered**
 - Data inspection and preprocessing.
