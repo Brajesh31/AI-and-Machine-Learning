@@ -103,7 +103,7 @@ This notebook focuses on preparing tabular data for regression. Its stated workf
 
 **File:** [Liver Disease Prediction (KNN, Decision Tree, Naive Bayes).ipynb](Liver%20Disease%20Prediction%20%28KNN%20%2C%20Desicion%20Tree%20%2C%20Naive%20Bayes%29.ipynb)
 
-This notebook loads `liver_cirrhosis.csv` and explores classification methods. The inspected cells include K-Nearest Neighbors, Decision Tree, Logistic Regression, SVM-related imports, and classification evaluation. The README's historical description also mentions Naive Bayes and Random Forest, so check the active notebook cells before assuming every listed estimator is trained.
+This notebook loads `liver_cirrhosis.csv` and contains K-Nearest Neighbors, Decision Tree, Logistic Regression, and Support Vector Machine classification workflows. The filename mentions Naive Bayes, but the current notebook does not implement a Naive Bayes estimator. The binary `Report_curable` target is an educational label derived from the dataset's Stage field, not a medical determination.
 
 The notebook uses a target field called `Report_curable` in its evaluation examples. That label should be treated as a dataset-specific target, not as an authoritative medical determination.
 
