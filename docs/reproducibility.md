@@ -44,7 +44,7 @@ Record the exact split method, test size, stratification, grouping, chronologica
 
 ## Future repository improvements
 
-- Add a pinned environment after verifying imports.
+- Consider a fully locked environment after validating the notebooks in a clean environment.
 - Add a dataset manifest and provenance record.
 - Validate notebooks in CI with safe, available data or mocked inputs.
 - Remove stale outputs when they create confusion or expose private information.
