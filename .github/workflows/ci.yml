@@ -1,4 +1,4 @@
-name: Notebook Structure Checks
+name: Notebook Quality Checks
 
 on:
   push:
@@ -10,42 +10,24 @@ permissions:
   contents: read
 
 jobs:
-  validate-notebooks:
-    name: Validate notebook files
+  validate:
+    name: Validate notebooks and repository tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
-      - name: Install notebook validator
-        run: python -m pip install nbformat
+      - name: Install validation dependencies
+        run: python -m pip install nbformat pytest
 
-      - name: Validate notebook JSON and structure
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import nbformat
+      - name: Validate notebook JSON and Python cell syntax
+        run: python scripts/validate_notebooks.py
 
-          notebooks = sorted(Path(".").glob("*.ipynb"))
-          if not notebooks:
-              raise SystemExit("No notebooks found at repository root.")
-
-          failures = []
-          for path in notebooks:
-              try:
-                  notebook = nbformat.read(path, as_version=4)
-                  nbformat.validate(notebook)
-                  print(f"VALID: {path}")
-              except Exception as exc:
-                  failures.append((path, exc))
-
-          if failures:
-              for path, exc in failures:
-                  print(f"INVALID: {path}: {exc}")
-              raise SystemExit(1)
-          PY
+      - name: Run repository tests
+        run: python -m pytest
