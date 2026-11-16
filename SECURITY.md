@@ -54,7 +54,7 @@ Verify data provenance, licence, permitted use, and redistribution terms. Treat 
 
 ## 📦 Dependency security
 
-Use isolated environments. Review package sources and advisories before installing or upgrading dependencies. The repository does not currently pin exact Python dependency versions.
+Use isolated environments. Review package sources and advisories before installing or upgrading dependencies. The repository provides compatible dependency ranges in `requirements.txt` and `requirements-dev.txt`, but does not yet provide a fully locked environment.
 
 ## 🧾 Notebook outputs and metadata
 
