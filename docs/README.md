@@ -7,6 +7,10 @@ This documentation explains the notebooks, their dataset requirements, machine-l
 | Guide | Purpose |
 |---|---|
 | [Notebook catalogue](notebook-catalogue.md) | Detailed inventory of all four notebooks |
+| [Architecture](architecture.md) | Repository structure and how notebook workflows fit together |
+| [Testing and validation](testing.md) | Structural checks, execution, data checks, and experiment validation |
+| [Model cards](model-cards.md) | Model reporting template and current experiment status |
+| [Dataset governance](data-governance.md) | Dataset provenance, privacy, safe handling, and change control |
 | [Datasets](datasets.md) | Required CSV files, expected paths, provenance, privacy |
 | [Methodology](methodology.md) | Data preparation, train/test design, fitting, and evaluation |
 | [Evaluation](evaluation.md) | Classification and regression metrics |
