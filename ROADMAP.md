@@ -1,42 +1,51 @@
 # 🗺️ AI and Machine Learning Roadmap
 
-This roadmap records possible improvements, not completed functionality or delivery commitments.
+This roadmap distinguishes implemented repository improvements from work that still depends on external datasets or a deeper experiment redesign. It is not a delivery commitment.
 
-## Priority 1: Reproducible environments
+## ✅ Completed repository foundations
 
-- [ ] Inspect all imports and create a verified dependency manifest.
-- [ ] Pin compatible Python and package versions.
-- [ ] Add clear per-notebook environment guidance if dependencies differ.
-- [ ] Record seeds and dataset versions.
+- [x] Add runtime and development dependency manifests.
+- [x] Add a dataset manifest and local placement guidance.
+- [x] Add notebook JSON and Python-cell syntax validation.
+- [x] Add repository integrity tests and CI.
+- [x] Document notebook architecture, methodology, evaluation, and responsible use.
+- [x] Correct the regression notebook's inline package-install command.
+- [x] Correct the diabetes BMI category ordering.
+- [x] Use Logistic Regression for the liver notebook's binary classification section.
+- [x] Use the cross-validated best estimator for Random Forest evaluation.
+- [x] Remove unnecessary hourly README timestamp commits.
 
-## Priority 2: Dataset governance
+## Priority 1: Dataset provenance and availability
 
-- [ ] Document exact source, version, licence, and checksum for each CSV.
+- [ ] Verify the official source, version, licence, and redistribution rights for every dataset.
 - [ ] Add data dictionaries for each target and feature.
-- [ ] Decide whether data may be redistributed.
-- [ ] Add safe local data-path configuration.
-- [ ] Remove absolute machine-specific paths.
+- [ ] Decide whether any source dataset can legally be redistributed.
+- [ ] Add checksums and dataset version metadata where practical.
+- [ ] Run each notebook against its correct, authorized source dataset.
 
-## Priority 3: Methodology
+## Priority 2: Methodology and leakage review
 
-- [ ] Review preprocessing order for leakage.
-- [ ] Use Pipeline and ColumnTransformer where useful.
-- [ ] Add stratified validation for classification when appropriate.
-- [ ] Use time-aware splits for temporal financial data.
-- [ ] Explain target definitions and class imbalance.
-- [ ] Compare models with appropriate baselines.
-
-## Priority 4: Evaluation and responsible AI
-
-- [ ] Add confusion matrices and class-level metrics.
+- [ ] Move learned preprocessing and feature selection inside training-only pipelines.
+- [ ] Audit target leakage in all notebooks.
+- [ ] Use stratified validation for classification where appropriate.
+- [ ] Use chronological or walk-forward splits for time-dependent cryptocurrency data.
+- [ ] Add meaningful baselines and class-level metrics.
 - [ ] Add residual analysis for regression.
-- [ ] Document calibration and threshold choices where relevant.
-- [ ] Expand healthcare limitations and bias discussion.
-- [ ] Record model limitations and intended-use boundaries.
 
-## Priority 5: Automation and maintenance
+## Priority 3: Reproducible experiment results
 
-- [ ] Validate notebook structure in CI.
-- [ ] Add safe notebook execution checks when datasets are available.
-- [ ] Clear stale outputs and sensitive notebook metadata.
-- [ ] Keep documentation synchronized with active notebook cells.
+- [ ] Validate dependency ranges in a clean environment and produce a fully locked environment.
+- [ ] Execute each notebook from a clean kernel with documented datasets.
+- [ ] Record verified metrics, parameters, random seeds, and environment versions.
+- [ ] Remove or refresh stale notebook outputs after reproducible execution.
+
+## Priority 4: Responsible AI and maintenance
+
+- [ ] Review healthcare target definitions with qualified domain expertise before making any real-world claims.
+- [ ] Add bias and subgroup analysis only where data governance and sample sizes support it.
+- [ ] Keep model cards synchronized with verified experiment runs.
+- [ ] Review dependency and workflow security periodically.
+
+## Scope boundary
+
+The repository remains a notebook-based educational project. A web API, database, production model-serving stack, or model registry should only be introduced if a real use case justifies the added complexity.
