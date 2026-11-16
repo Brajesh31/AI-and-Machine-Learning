@@ -1,0 +1,40 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Generated data and model artifacts
+data/raw/
+data/private/
+models/
+artifacts/
+*.pkl
+*.joblib
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
