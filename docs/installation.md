@@ -30,7 +30,7 @@ python -m pip install --upgrade pip
 ## Install common dependencies
 
 ```bash
-python -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn statsmodels
+python -m pip install -r requirements.txt
 ```
 
 These are a practical shared set based on notebook imports and project descriptions. A notebook may need additional packages depending on all cells and data-specific operations.
