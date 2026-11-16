@@ -1,35 +1,31 @@
 # 🏛️ Project Governance
 
-## Project purpose
+## Purpose
 
-AI and Machine Learning is a collection of educational notebooks exploring data preprocessing, regression, and classification. Governance aims to preserve learning value, responsible data handling, reproducibility, and accurate reporting.
+This repository is an educational collection of machine-learning notebooks. Governance aims to preserve methodological honesty, responsible data use, reproducibility, and learning value.
 
 ## Maintainer model
 
-The repository is maintained by its owner. Contributors participate through issues and pull requests. This document does not establish a committee, foundation, or guaranteed review schedule.
+The repository is maintained by its owner. Contributions are reviewed through GitHub issues and pull requests. This policy does not establish a committee, foundation, or guaranteed response schedule.
 
 ## Decision principles
 
-1. Correct and reproducible analysis over impressive but unsupported scores.
-2. Data provenance and licence clarity.
-3. Privacy-first handling of datasets and notebook outputs.
-4. Separation of training, validation, and test data.
-5. Responsible communication of healthcare-related results.
-6. Minimal dependencies and understandable notebooks.
-7. Documentation that distinguishes current code from proposals.
+- Evidence over unsupported performance claims.
+- Reproducibility over one-off notebook output.
+- Data provenance and licence clarity.
+- Privacy-first handling of sensitive data.
+- Clear validation boundaries.
+- Responsible communication of healthcare-related experiments.
+- Maintainable notebooks and documentation.
 
 ## Contribution lifecycle
 
-A substantial change should explain the problem, notebook, data source, target, methodology, and validation plan. Changes should be reviewed for correctness, leakage, privacy, and documentation impact.
+Significant changes should describe the problem, affected notebook, data source, target, proposed methodology, and validation plan. Review should consider code, data, reproducibility, privacy, and documentation.
 
-## Review and disagreements
+## Disagreements
 
-Technical disagreement is welcome when based on evidence, reproducible experiments, and clear assumptions. The Code of Conduct applies to all project spaces.
+Scientific and technical disagreement is welcome. Discuss evidence, assumptions, and validation methods respectfully. The Code of Conduct applies to all project collaboration spaces.
 
-## Security and sensitive data
+## Security
 
-Use SECURITY.md for private vulnerability reports. Do not raise private data incidents in public notebook outputs or issue attachments.
-
-## Governance updates
-
-This policy may evolve as the repository gains contributors. Changes should be documented and communicated.
+Use the private reporting process described in SECURITY.md. Do not publish secrets or sensitive data in public issues.
