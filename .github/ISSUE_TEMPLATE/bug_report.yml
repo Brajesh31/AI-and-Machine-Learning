@@ -1,0 +1,45 @@
+name: Notebook or methodology issue
+description: Report a reproducible notebook, data, or evaluation problem.
+title: "[Notebook issue]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach private datasets, patient records, credentials, or identifiable information. Use synthetic examples.
+  - type: input
+    id: notebook
+    attributes:
+      label: Notebook filename
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python, OS, Jupyter, and relevant package versions.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Dataset context
+      description: State the public dataset source and version. Do not upload private data.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps and failing cell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and sanitized traceback
+    validations:
+      required: true
