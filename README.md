@@ -124,12 +124,12 @@ The notebook uses a target field called `Report_curable` in its evaluation examp
 This notebook loads `diabetes.csv` and compares Gaussian Naive Bayes with Bernoulli Naive Bayes. It engineers glucose, BMI, and age categories, applies dummy encoding, filters insulin values using an IQR rule, and transforms insulin and skin-thickness features. The current code does not implement the zero-to-missing replacement, median imputation, or scaling previously described in this README.
 
 **Topics covered**
-- Invalid-zero handling for selected clinical measurements.
-- Median imputation.
-- Log and square-root transformations.
-- Age and BMI-derived categories.
+- Glucose, BMI, and age-derived categories.
 - One-hot/dummy encoding.
-- Standard scaling.
+- IQR-based filtering of insulin values.
+- Log transformation of insulin.
+- Square-root transformation of skin thickness.
+- GaussianNB and BernoulliNB comparison.
 - GaussianNB and BernoulliNB.
 - Train and test accuracy comparison.
 
