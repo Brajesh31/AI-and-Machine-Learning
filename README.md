@@ -83,8 +83,6 @@ The repository contains these four notebooks. Open each notebook in GitHub or la
 
 ### 1. Mini Project: Data Preprocessing and Regression Model
 
-<text></text>
-
 **File:** [Mini Project - Data Preprocessing & Regression Model.ipynb](Mini%20Project%20-%20Data%20Preprocessing%20%26%20Regression%20Model.ipynb)
 
 This notebook focuses on preparing tabular data for regression. Its stated workflow includes missing-value handling, duplicate checks, IQR-based outlier treatment, categorical encoding, transformation, feature engineering, train/test splitting, and Ordinary Least Squares regression using Statsmodels.
