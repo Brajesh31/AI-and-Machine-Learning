@@ -21,7 +21,7 @@ def python_source(source: str) -> str:
             kept.append("# IPython command omitted from static syntax check")
         else:
             kept.append(line)
-    return "\\n".join(kept)
+    return "\n".join(kept)
 
 
 def main() -> int:
@@ -56,7 +56,7 @@ def main() -> int:
             print(f"VALID: {path.name}")
 
     if errors:
-        print("\\n".join(errors), file=sys.stderr)
+        print("\n".join(errors), file=sys.stderr)
         return 1
     print(f"Validated {len(NOTEBOOKS)} notebook(s). Cell execution was not performed.")
     return 0
