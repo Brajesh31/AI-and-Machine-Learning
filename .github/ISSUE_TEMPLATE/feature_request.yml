@@ -1,0 +1,27 @@
+name: Research or learning enhancement
+description: Suggest an improvement to the notebooks or learning workflow.
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Learning or research objective
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed notebook or methodology change
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Dataset provenance and licence
+      description: Include source, terms, and whether redistribution is permitted.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Explain split strategy, metrics, and leakage safeguards.
