@@ -1,6 +1,6 @@
 # 📊 Dataset Requirements and Data Governance
 
-The notebooks load CSV files from local relative paths. The repository tree currently contains the four notebooks but does not include the input CSV datasets. A notebook that refers to a filename does not imply that the file is distributed with this repository.
+The notebooks load CSV files from local relative paths. The repository contains four notebooks and a dataset manifest under `data/`, but the input CSV datasets themselves are not included. A notebook that refers to a filename does not imply that the file is distributed with this repository.
 
 ## Expected dataset files
 
