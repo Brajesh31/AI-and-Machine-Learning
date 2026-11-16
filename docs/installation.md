@@ -7,7 +7,7 @@
 - Access to the CSV files required by the notebook you intend to run.
 - A terminal for environment setup.
 
-The repository does not currently pin an exact Python or library environment. A reproducible release should add a verified dependency file.
+The repository includes compatible dependency ranges in `requirements.txt` and development tools in `requirements-dev.txt`. These ranges are not a fully locked environment. Record the installed versions when publishing results.
 
 ## Create a virtual environment
 
