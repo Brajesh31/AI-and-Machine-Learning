@@ -204,24 +204,21 @@ The actual installed versions are not pinned in the current repository. Create a
 
 ```text
 AI-and-Machine-Learning/
-├── Liver Disease Prediction (KNN , Desicion Tree , Naive Bayes).ipynb
-├── Mini Project - Data Preprocessing & Regression Model.ipynb
-├── Mini project (Naive Bayes Healthcare dataset).ipynb
-├── Mini project (Random Forest).ipynb
-├── docs/
-│   ├── README.md
-│   ├── notebook-catalogue.md
-│   ├── methodology.md
-│   ├── reproducibility.md
-│   ├── datasets.md
-│   ├── evaluation.md
-│   ├── responsible-ai.md
-│   ├── installation.md
-│   ├── development.md
-│   ├── troubleshooting.md
-│   ├── faq.md
-│   └── deployment.md
-├── .env.example
+├── *.ipynb                         Four machine-learning notebooks
+├── data/
+│   └── README.md                   Dataset manifest and placement guide
+├── scripts/
+│   └── validate_notebooks.py       Notebook structure and syntax validator
+├── tests/
+│   └── test_repository.py          Repository integrity tests
+├── docs/                           Technical documentation and guides
+├── .github/
+│   ├── ISSUE_TEMPLATE/             Bug and feature request templates
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/ci.yml            Static checks and tests
+├── requirements.txt                Runtime dependencies
+├── requirements-dev.txt            Development dependencies
+├── pytest.ini
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
@@ -264,7 +261,7 @@ Create an isolated Python environment:
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn statsmodels
+python -m pip install -r requirements.txt
 ```
 
 **macOS / Linux**
@@ -275,7 +272,7 @@ python -m pip install --upgrade pip
 python -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn statsmodels
 ```
 
-These commands install a practical common dependency set. They do not reproduce a historical environment exactly because the repository does not currently pin package versions. See [docs/reproducibility.md](docs/reproducibility.md).
+The dependency manifest defines compatible version ranges, not a fully locked historical environment. See [docs/reproducibility.md](docs/reproducibility.md).
 
 ## ▶️ Run the Notebooks
 
