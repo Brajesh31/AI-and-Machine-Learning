@@ -1,4 +1,6 @@
-* text=auto
-*.ipynb text eol=lf
+# Keep Jupyter notebooks and documentation as text in Git diffs.
+*.ipynb diff
 *.md text eol=lf
-*.csv text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf
