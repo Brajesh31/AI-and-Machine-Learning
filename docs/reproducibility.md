@@ -4,7 +4,7 @@ A notebook is reproducible only when another person can obtain compatible data, 
 
 ## Current repository state
 
-The repository currently includes four notebooks and documentation. It does not include a pinned `requirements.txt`, `environment.yml`, or the CSV datasets referenced by the notebooks. Saved notebook outputs may be stale and should not be treated as a current experiment run.
+The repository currently includes four notebooks and documentation. It includes `requirements.txt` and `requirements-dev.txt` with compatible version ranges, but not a fully locked environment or the CSV datasets referenced by the notebooks. Saved notebook outputs may be stale and should not be treated as a current experiment run.
 
 ## Recommended environment capture
 
