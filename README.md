@@ -12,7 +12,7 @@
 </p>
 
 > [!IMPORTANT]
-> The healthcare notebooks are educational experiments. They are not clinically validated, must not be used for diagnosis, treatment, screening, insurance, or other high-impact decisions, and should not be interpreted as medical advice. The repository does not include the referenced CSV datasets.
+> The healthcare notebooks are educational experiments. They are not clinically validated, must not be used for diagnosis, treatment, screening, insurance, or other high-impact decisions, and should not be interpreted as medical advice. The repository does not include the referenced CSV datasets. See [data/README.md](data/README.md) for the exact expected filenames.
 
 ---
 
@@ -56,7 +56,7 @@ The notebooks are educational artifacts, not a single packaged application. Each
 ### What is not included
 
 - The source CSV datasets referenced by the notebooks.
-- A pinned Python dependency file such as `requirements.txt`.
+- A fully locked environment file. `requirements.txt` currently provides compatible version ranges.
 - A unified training pipeline or reusable model package.
 - A deployed inference API or web interface.
 - A model registry, experiment tracker, or saved production model.
@@ -97,7 +97,7 @@ This notebook focuses on preparing tabular data for regression. Its stated workf
 - OLS regression and residual-oriented evaluation.
 - R², mean absolute error, and mean squared error.
 
-**Dataset requirement:** The exact CSV filename and source should be confirmed from the notebook cells. This repository does not currently include a CSV dataset for this notebook.
+**Dataset requirement:** `LoansData (1).csv`, not included in this repository.
 
 ### 2. Liver Disease Prediction
 
