@@ -20,9 +20,7 @@ The README describes an end-to-end preprocessing and OLS regression exercise. Th
 
 **Observed input:** `liver_cirrhosis.csv`.
 
-The notebook imports KNeighborsClassifier, DecisionTreeClassifier, LogisticRegression, SVC, StandardScaler, train_test_split, GridSearchCV, and classification metrics. Evaluation code references a `Report_curable` target field.
-
-The filename and historical README mention KNN, Decision Tree, and Naive Bayes, but imports alone do not prove every model is trained. Inspect executed cells before recording final model comparisons.
+The current code trains K-Nearest Neighbors, Decision Tree, Logistic Regression, and Support Vector Machine classifiers. The filename includes Naive Bayes, but no Naive Bayes estimator is implemented in the current notebook. The `Report_curable` target is derived from the source dataset's Stage field and is not a clinical determination. The binary classification workflow now uses LogisticRegression rather than treating the binary target as an OLS regression problem.
 
 ## 3. Diabetes Naive Bayes Classification
 
